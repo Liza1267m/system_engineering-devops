@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
-# Script that stops the 4-to_infinity_and_beyond process without using kill or killall
+# Script that prints forever and reacts to SIGTERM
 
-pkill -f 4-to_infinity_and_beyond
+trap 'echo "I am invincible!!!"' SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
