@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Script that prints forever and ignores SIGTERM
+# Infinite loop that reacts to SIGTERM
 
-trap 'echo "I am invincible!!!"' SIGTERM
+# Flush output immediately and handle SIGTERM
+trap 'printf "I am invincible!!!\n"' SIGTERM
 
-while :
-do
-    echo "To infinity and beyond"
+while true; do
+    printf "To infinity and beyond\n"
     sleep 2
 done
