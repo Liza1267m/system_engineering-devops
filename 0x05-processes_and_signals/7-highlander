@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
-# Displays "To infinity and beyond" indefinitely; reacts to SIGTERM with a message
+# Script that prints forever and ignores SIGTERM
 
-# Trap SIGTERM and print "I am invincible!!!"
 trap 'echo "I am invincible!!!"' SIGTERM
 
-# Infinite loop
-while true
+while :
 do
     echo "To infinity and beyond"
     sleep 2
